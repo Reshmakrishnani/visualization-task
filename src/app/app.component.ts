@@ -1,5 +1,9 @@
 import { Component } from '@angular/core';
 import { RouterModule, RouterOutlet } from '@angular/router';
+import { StoreModule } from '@ngrx/store';
+import { dashboardReducer } from '../reducer/dashboard.reducers';
+import { CommonModule } from '@angular/common';
+import { BrowserModule } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-root',
@@ -9,5 +13,8 @@ import { RouterModule, RouterOutlet } from '@angular/router';
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
-  title = 'visualization-task';
+ constructor(){
+  console.log('dshhduhudsu');
+ }
+
 }

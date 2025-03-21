@@ -5,23 +5,28 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+# Dashboard Application
 
-## Code scaffolding
+This project is a dynamic dashboard that renders different data visualizations based on user-selected metrics. It uses **Angular 17**, **NgRx 17**, and **ngx-charts** to create interactive and responsive visualizations like bar charts, line graphs, and pie charts. The data is fetched using a mock JSON file to simulate API responses.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Features
 
-## Build
+- **Dynamic Data Visualizations**: Render different types of charts (bar, line, pie) based on user selection.
+- **State Management**: Managed using **NgRx** for better state handling and scalability.
+- **Responsive Design**: The dashboard adapts to different screen sizes.
+- **Customizable Visualizations**: Users can change chart types and customize visualizations.
+- **Testing**: The application includes unit tests for components and services.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## Project Setup
 
-## Running unit tests
+### Prerequisites
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Make sure you have the following installed:
 
-## Running end-to-end tests
+- **Node.js** (preferably the latest LTS version)  
+  [Download Node.js](https://nodejs.org/)
+- **Angular CLI**  
+  Install it globally using npm:
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+  ```bash
+  npm install -g @angular/cli

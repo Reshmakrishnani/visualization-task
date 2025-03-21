@@ -1,0 +1,17 @@
+{
+  "sales": [
+    { "month": "January", "value": 150 },
+    { "month": "February", "value": 120 },
+    { "month": "March", "value": 130 }
+  ],
+  "engagement": [
+    { "day": "Monday", "value": 30 },
+    { "day": "Tuesday", "value": 40 },
+    { "day": "Wednesday", "value": 35 }
+  ],
+  "performance": [
+    { "metric": "Speed", "value": 95 },
+    { "metric": "Efficiency", "value": 80 },
+    { "metric": "Quality", "value": 85 }
+  ]
+}

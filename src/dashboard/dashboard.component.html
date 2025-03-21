@@ -1,1 +1,43 @@
-<p>dashboard works!</p>
+<div class="dashboard-container">
+  <div class="controls">
+    <mat-form-field>
+      <mat-select placeholder="Select Metric" (selectionChange)="onMetricChange($event.value)">
+        <mat-option value="salesData">Sales Data</mat-option>
+        <mat-option value="userEngagement">User Engagement</mat-option>
+        <mat-option value="performanceStats">Performance Stats</mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-select placeholder="Select Visualization Type" (selectionChange)="onVisualizationChange($event.value)">
+        <mat-option value="bar">Bar Chart</mat-option>
+        <mat-option value="line">Line Chart</mat-option>
+        <mat-option vadatalue="pie">Pie Chart</mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
+
+  <div class="chart-container">
+    <div *ngIf="data$ | async as data">
+
+    <div *ngIf="visualizationType$ | async as visualizationType">
+      {{data$ |json}}{{visualizationType}}
+    <ngx-charts-bar-vertical
+    *ngIf="visualizationType === 'bar'"
+      [results]="data.salesData">
+    </ngx-charts-bar-vertical>
+</div>
+<div *ngIf="visualizationType$ | async as visualizationType">
+    <ngx-charts-line-chart
+    *ngIf="visualizationType == 'line'"
+      [results]="data.salesData">
+    </ngx-charts-line-chart>
+  </div>
+
+    <!-- <ngx-charts-pie-chart
+      *ngIf="visualizationType$ | async === 'pie'"
+      [results]="data$ | async?.salesData">
+    </ngx-charts-pie-chart> -->
+  </div>
+  </div>
+</div>
